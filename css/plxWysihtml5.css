@@ -1,0 +1,37 @@
+.wysiHtml5_toolbar {
+    margin: 5px 0;
+    height: 30px;
+}
+
+.wysiHtml5_toolbar a {
+    display: block;
+    float: left;
+    padding: 5px;
+    margin: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #57ad68;
+    border: none;
+    border-right: 1px solid #9ccea6;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;	/* to remove underline for links */ 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;	/* don't add padding + border to the box size */
+    -webkit-transition: background-color 0.2s ease-in,color 0.2s ease-in;
+    -moz-transition: background-color 0.2s ease-in,color 0.2s ease-in;
+    -o-transition: background-color 0.2s ease-in,color 0.2s ease-in;
+    transition: background-color 0.2s ease-in,color 0.2s ease-in;	/* fade color with hover */
+    font-weight: normal;
+    font-style: normal;
+    font-family: FontAwesome;
+    text-align: center;
+    line-height: 145%;
+}
+
+.wysiHtml5_toolbar a:hover {
+    background-color: #346a3f;
+    color: #fff;
+}
+

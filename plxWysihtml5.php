@@ -3,7 +3,7 @@
  * Plugin plxWysihtml5
  *
  * @package	plxWysihtml5
- * @version	0.1.1
+ * @version	0.2
  * @date	12/02/2014
  * @author	Neimad
  **/
@@ -20,32 +20,14 @@ class plxWysihtml5 extends plxPlugin {
 	public function AdminTopEndHead() {
 		echo '<script src="'.PLX_PLUGINS.'plxWysihtml5/lib/advanced.js"></script>'."\n";
 		echo '<script src="'.PLX_PLUGINS.'plxWysihtml5/lib/wysihtml5-0.3.0.min.js"></script>'."\n";
-	}
-	public function AdminArticleTop() {
-		echo '<!-- wysihtml5 plugin -->'."\n";
-		echo '<div id="wysihtml5-toolbar" style="display: none;">'."\n";
-		echo '  <a data-wysihtml5-command="bold">bold</a>'."\n";
-		echo '  <a data-wysihtml5-command="italic">italic</a>'."\n";
-
-		echo '  <!-- Some wysihtml5 commands like \'createLink\' require extra paramaters specified by the user (eg. href) -->'."\n";
-		echo '  <a data-wysihtml5-command="createLink">insert link</a>'."\n";
-		echo '  <div data-wysihtml5-dialog="createLink" style="display: none;">'."\n";
-		echo '    <label>'."\n";
-		echo '      Link:'."\n";
-		echo '      <input data-wysihtml5-dialog-field="href" value="http://" class="text">'."\n";
-		echo '    </label>'."\n";
-		echo '    <a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>'."\n";
-		echo '  </div>'."\n";
-		echo '  <a data-wysihtml5-action="change_view" title="Show HTML" class="action">Show HTML</a>'."\n";
-		echo '</div>'."\n";
+		echo '<script src="'.PLX_PLUGINS.'plxWysihtml5/lib/init_toolbar.js"></script>'."\n";
+		echo '<link rel="stylesheet" type="text/css" href="'.PLX_PLUGINS.'plxWysihtml5/css/plxWysihtml5.css" media="screen" />'."\n";
+		echo '<link rel="stylesheet" type="text/css" href="'.PLX_PLUGINS.'plxWysihtml5/css/font-awesome.min.css" media="screen" />'."\n";
 	}
 	public function AdminFootEndBody() {
 		echo '<script>'."\n";
-		echo '	var editor = new wysihtml5.Editor("id_content", { // id of textarea element'."\n";
-		echo '	  toolbar:      "wysihtml5-toolbar", // id of toolbar element'."\n";
-		echo '	  parserRules:  wysihtml5ParserRules, // defined in parser rules set'."\n"; 
-		echo '	  stylesheets: [""]'."\n";
-		echo '	});'."\n";
+		echo 'initWysiwyg("p_chapo","id_chapo");'."\n";
+		echo 'initWysiwyg("p_content","id_content");'."\n";
 		echo '</script>'."\n";
 	}
 }
