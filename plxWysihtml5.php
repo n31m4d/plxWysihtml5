@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin wysihtml5
+ * Plugin plxWysihtml5
  *
- * @package	Wysihtml5
- * @version	0.1
- * @date	09/02/2014
+ * @package	plxWysihtml5
+ * @version	0.1.1
+ * @date	12/02/2014
  * @author	Neimad
  **/
-class wysihtml5 extends plxPlugin {
+class plxWysihtml5 extends plxPlugin {
 	public function __construct($default_lang) {
 		# Appel du constructeur de la classe plxPlugin (obligatoire)
 		parent::__construct($default_lang);
@@ -18,8 +18,8 @@ class wysihtml5 extends plxPlugin {
 		$this->addHook('AdminArticleTop', 'AdminArticleTop');
 	}
 	public function AdminTopEndHead() {
-		echo '<script src="'.PLX_PLUGINS.'wysihtml5/lib/advanced.js"></script>'."\n";
-		echo '<script src="'.PLX_PLUGINS.'wysihtml5/lib/wysihtml5-0.3.0.min.js"></script>'."\n";
+		echo '<script src="'.PLX_PLUGINS.'plxWysihtml5/lib/advanced.js"></script>'."\n";
+		echo '<script src="'.PLX_PLUGINS.'plxWysihtml5/lib/wysihtml5-0.3.0.min.js"></script>'."\n";
 	}
 	public function AdminArticleTop() {
 		echo '<!-- wysihtml5 plugin -->'."\n";
